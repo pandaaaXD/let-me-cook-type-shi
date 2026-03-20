@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LET ME COOK</title>
+<link rel="icon" type="image/png" href="stickers/619850903_18077071550522743_1446981766921803759_n.png">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- FLOATING STICKERS (background decoration) -->
+<div class="sticker-layer" id="stickerLayer" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-logo">le cut plan ehe</div>
+  <div class="nav-links">
+    <a href="#overview">aperçu</a>
+    <a href="#programme">programme</a>
+    <a href="#carb-cycling">carb cycling</a>
+    <a href="#projection">projection</a>
+    <a href="#regles">règles</a>
+  </div>
+  <div class="nav-tag">22F · 75 kg · 164 cm</div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">✦ programme un peu agressive hihi· 3 mois ✦</div>
+    <h1 class="hero-title">Go sécher<br><span>heh aled</span> <span class="hero-heart"> <3 </span></h1>
+    <p class="hero-sub">12 semaines · 5 séances · carb cycling (pcq bon🧍🏻‍♀️)· −10 à 11 kg de GRAHHHH</p>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-icon">🔥</div>
+        <div class="hero-stat-val">2 605</div>
+        <div class="hero-stat-label">TDEE kcal/jour</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-icon">💪</div>
+        <div class="hero-stat-val">−10–11</div>
+        <div class="hero-stat-label">kg objectif</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-icon">🏋️</div>
+        <div class="hero-stat-val">5×</div>
+        <div class="hero-stat-label">séances/semaine</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-icon">🗿</div>
+        <div class="hero-stat-val">10k</div>
+        <div class="hero-stat-label">pas/jour</div>
+      </div>
+    </div>
+
+    <div class="hero-note">
+      🙂‍↕️ Objectif : <strong>−10 à 11 kg de graisse</strong> en 12 semaines. 15 kg = catabolisme musculaire inchhh. ON VISE LA <strong>définition maximale (GENRE MAKI ZENIN OK ??)</strong> — épaules arrondies, fessiers DES ENFERS hihi, ventre plat (par pitié).
+    </div>
+  </div>
+
+  <div class="hero-sticker-zone" id="heroStickers"></div>
+  <div class="scroll-cue">scroll salope ↓</div>
+</div>
+
+<!-- ═══════ 01 APERÇU ═══════ -->
+<section id="overview" class="section">
+  <div class="section-header reveal">
+    <span class="section-num">01</span>
+    <h2 class="section-title">Aperçu général 🥹</h2>
+  </div>
+
+  <div class="phase-bar reveal">
+    <div class="phase-block active" onclick="setPhase(1,this)">
+      <div class="phase-emoji">🌱</div>
+      <div class="phase-label">Phase 1 · S1–4</div>
+      <div class="phase-kcal">1 850 kcal</div>
+      <div class="phase-def">−755 kcal/jour</div>
+      <div class="phase-tag">Mise en place</div>
+    </div>
+    <div class="phase-block" onclick="setPhase(2,this)">
+      <div class="phase-emoji">🔥</div>
+      <div class="phase-label">Phase 2 · S5–8</div>
+      <div class="phase-kcal">1 780 kcal</div>
+      <div class="phase-def">−825 kcal/jour</div>
+      <div class="phase-tag">Progression</div>
+    </div>
+    <div class="phase-block" onclick="setPhase(3,this)">
+      <div class="phase-emoji">💥</div>
+      <div class="phase-label">Phase 3 · S9–12</div>
+      <div class="phase-kcal">1 700 kcal</div>
+      <div class="phase-def">−905 kcal/jour</div>
+      <div class="phase-tag">Finisher</div>
+    </div>
+  </div>
+
+  <div id="phase-p1" class="macro-panel active">
+    <div class="macro-card-wrap">
+      <div class="macro-bar-group">
+        <div class="macro-row">
+          <div class="macro-row-top"><span class="macro-name">🔵 Protéines</span><span class="macro-detail">150 g · 600 kcal · 32%</span></div>
+          <div class="macro-track"><div class="macro-fill" data-w="32" style="background:var(--blue)"></div></div>
+        </div>
+        <div class="macro-row">
+          <div class="macro-row-top"><span class="macro-name">🟢 Glucides</span><span class="macro-detail">163 g · 650 kcal · 35%</span></div>
+          <div class="macro-track"><div class="macro-fill" data-w="35" style="background:var(--green)"></div></div>
+        </div>
+        <div class="macro-row">
+          <div class="macro-row-top"><span class="macro-name">🟡 Lipides</span><span class="macro-detail">67 g · 600 kcal · 33%</span></div>
+          <div class="macro-track"><div class="macro-fill" data-w="33" style="background:var(--amber)"></div></div>
+        </div>
+      </div>
+      <div class="macro-stat-grid">
+        <div class="mstat"><div class="mstat-icon">⚡</div><div class="mstat-val">1 850</div><div class="mstat-label">kcal/jour</div></div>
+        <div class="mstat"><div class="mstat-icon">📉</div><div class="mstat-val">−755</div><div class="mstat-label">kcal déficit</div></div>
+        <div class="mstat"><div class="mstat-icon">🚫</div><div class="mstat-val">Aucun</div><div class="mstat-label">refeed</div></div>
+        <div class="mstat"><div class="mstat-icon">🏃</div><div class="mstat-val">1× LISS</div><div class="mstat-label">cardio extra sam</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="phase-p2" class="macro-panel">
+    <div class="macro-card-wrap">
+      <div class="macro-bar-group">
+        <div class="macro-row">
+          <div class="macro-row-top"><span class="macro-name">🔵 Protéines</span><span class="macro-detail">150 g · 600 kcal · 34%</span></div>
+          <div class="macro-track"><div class="macro-fill" data-w="34" style="background:var(--blue)"></div></div>
+        </div>
+        <div class="macro-row">
+          <div class="macro-row-top"><span class="macro-name">🟢 Glucides</span><span class="macro-detail">153 g · 612 kcal · 34%</span></div>
+          <div class="macro-track"><div class="macro-fill" data-w="34" style="background:var(--green)"></div></div>
+        </div>
+        <div class="macro-row">
+          <div class="macro-row-top"><span class="macro-name">🟡 Lipides</span><span class="macro-detail">64 g · 568 kcal · 32%</span></div>
+          <div class="macro-track"><div class="macro-fill" data-w="32" style="background:var(--amber)"></div></div>
+        </div>
+      </div>
+      <div class="macro-stat-grid">
+        <div class="mstat"><div class="mstat-icon">⚡</div><div class="mstat-val">1 780</div><div class="mstat-label">kcal/jour</div></div>
+        <div class="mstat"><div class="mstat-icon">📉</div><div class="mstat-val">−825</div><div class="mstat-label">kcal déficit</div></div>
+        <div class="mstat"><div class="mstat-icon">🔄</div><div class="mstat-val">S6</div><div class="mstat-label">refeed obligatoire</div></div>
+        <div class="mstat"><div class="mstat-icon">🏃</div><div class="mstat-val">LISS+HIIT</div><div class="mstat-label">cardio extra (ALED FRR AAAAA)</div></div>
+      </div>
+    </div>
+    <div class="phase-note-cute">💬 Carb cycling (triste vie 😭) ! Refeed OBLIGATOIRE semaine 6 : 2 605 kcal, glucides 320–340 g, lipides bas (~50 g). Ça relance la leptine 🔥 (OUE OUE OUE)</div>
+  </div>
+
+  <div id="phase-p3" class="macro-panel">
+    <div class="macro-card-wrap">
+      <div class="macro-bar-group">
+        <div class="macro-row">
+          <div class="macro-row-top"><span class="macro-name">🔵 Protéines</span><span class="macro-detail">158 g · 632 kcal · 37%</span></div>
+          <div class="macro-track"><div class="macro-fill" data-w="37" style="background:var(--blue)"></div></div>
+        </div>
+        <div class="macro-row">
+          <div class="macro-row-top"><span class="macro-name">🟢 Glucides</span><span class="macro-detail">143 g · 572 kcal · 34%</span></div>
+          <div class="macro-track"><div class="macro-fill" data-w="34" style="background:var(--green)"></div></div>
+        </div>
+        <div class="macro-row">
+          <div class="macro-row-top"><span class="macro-name">🟡 Lipides</span><span class="macro-detail">55 g · 495 kcal · 29%</span></div>
+          <div class="macro-track"><div class="macro-fill" data-w="29" style="background:var(--amber)"></div></div>
+        </div>
+      </div>
+      <div class="macro-stat-grid">
+        <div class="mstat"><div class="mstat-icon">⚡</div><div class="mstat-val">1 700</div><div class="mstat-label">plancher absolu</div></div>
+        <div class="mstat"><div class="mstat-icon">📉</div><div class="mstat-val">−905</div><div class="mstat-label">kcal déficit</div></div>
+        <div class="mstat"><div class="mstat-icon">🔄</div><div class="mstat-val">hebdo</div><div class="mstat-label">refeed dim. obligatoire</div></div>
+        <div class="mstat"><div class="mstat-icon">🏃</div><div class="mstat-val">2× sam+dim</div><div class="mstat-label">LISS + HIIT</div></div>
+      </div>
+    </div>
+    <div class="phase-note-cute">💬 Protéines montées à 158 g pour protéger la masse musculaire. 1 700 kcal = plancher, on descend plus bas. Carb cycling + refeed chaque dimanche !</div>
+  </div>
+</section>
+
+<!-- ═══════ 02 PROGRAMME ═══════ -->
+<section id="programme" class="section">
+  <div class="section-header reveal">
+    <span class="section-num">02</span>
+    <h2 class="section-title">Programme 5 jours 💪</h2>
+  </div>
+
+  <div class="week-grid reveal">
+    <div class="week-day active" onclick="setDay('lun',this)">
+      <div class="wd-emoji">🍑</div>
+      <div class="wd-name">Lun</div>
+      <div class="wd-label db-glutes">Fessiers 1 GRRR hihi</div>
+      <div class="wd-sub">+ Abs</div>
+    </div>
+    <div class="week-day" onclick="setDay('mar',this)">
+      <div class="wd-emoji">💙</div>
+      <div class="wd-name">Mar</div>
+      <div class="wd-label db-push">Push YIPPIEE</div>
+      <div class="wd-sub">+ Abs</div>
+    </div>
+    <div class="week-day" onclick="setDay('mer',this)">
+      <div class="wd-emoji">🦵</div>
+      <div class="wd-name">Mer</div>
+      <div class="wd-label db-quads">Quads AGHAHAG</div>
+      <div class="wd-sub">&nbsp;</div>
+    </div>
+    <div class="week-day" onclick="setDay('jeu',this)">
+      <div class="wd-emoji">💛</div>
+      <div class="wd-name">Jeu</div>
+      <div class="wd-label db-pull">Pull SLAAAYY</div>
+      <div class="wd-sub">+ Abs</div>
+    </div>
+    <div class="week-day" onclick="setDay('ven',this)">
+      <div class="wd-emoji">🍑</div>
+      <div class="wd-name">Ven</div>
+      <div class="wd-label db-glutes">Fessiers 2 GRR ALED</div>
+      <div class="wd-sub">+ Épaules</div>
+    </div>
+    <div class="week-day rest">
+      <div class="wd-emoji">😴</div>
+      <div class="wd-name">Sam</div>
+      <div class="wd-label db-rest">Repos Zzzz..</div>
+      <div class="wd-sub">Cardio opt. (:'))</div>
+    </div>
+    <div class="week-day rest">
+      <div class="wd-emoji">🌸</div>
+      <div class="wd-name">Dim</div>
+      <div class="wd-label db-rest">Repos Zzz...</div>
+      <div class="wd-sub">Refeed P2–P3</div>
+    </div>
+  </div>
+
+  <!-- Session panels -->
+  <div id="day-lun" class="session-panel active">
+    <div class="session-head">
+      <h3 class="session-title">🍑 Fessiers 1 — Force</h3>
+      <span class="session-dur">~70 min</span>
+    </div>
+    <div class="ex-block-label">Bloc fessiers</div>
+    <div class="ex-list">
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Hip thrust barre <span class="tag-key">priorité 1</span></div><div class="ex-note">Pause 1 sec en haut, squeeze maximal. Progresser en charge chaque semaine.</div></div><div class="ex-sets">4 × 8–10</div><div class="ex-pills"><span class="mpill mp-g">Fessiers</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">RDL barre</div><div class="ex-note">Descente lente 3 sec, hanches en arrière, dos neutre</div></div><div class="ex-sets">3 × 10–12</div><div class="ex-pills"><span class="mpill mp-h">Ischio</span><span class="mpill mp-g">Fessiers</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Bulgarian split squat haltères</div><div class="ex-note">Descente contrôlée, genou avant stable</div></div><div class="ex-sets">3 × 10/côté</div><div class="ex-pills"><span class="mpill mp-g">Fessiers</span><span class="mpill mp-q">Quads</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Back extension <span class="tag-key">rotation ext. en haut</span></div><div class="ex-note">Légère rotation externe en extension pour recruter les fessiers</div></div><div class="ex-sets">3 × 12–15</div><div class="ex-pills"><span class="mpill mp-g">Fessiers</span><span class="mpill mp-h">Ischio</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Cable kickback <span class="tag-ss">superset →</span></div><div class="ex-note">Extension complète, ne pas balancer</div></div><div class="ex-sets">3 × 15/côté</div><div class="ex-pills"><span class="mpill mp-g">Fessiers</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Hip abductions machine <span class="tag-ss">← superset</span></div><div class="ex-note">Enchaîner avec kickback, 30 sec repos après</div></div><div class="ex-sets">3 × 20</div><div class="ex-pills"><span class="mpill mp-g">Abducteurs</span></div></div>
+    </div>
+    <div class="ex-block-label">Abs — finisher 10 min</div>
+    <div class="ex-list">
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Dead bug</div><div class="ex-note">Bas du dos collé au sol, mouvement lent</div></div><div class="ex-sets">3 × 10/côté</div><div class="ex-pills"><span class="mpill mp-core">Core profond</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Leg raise banc <span class="tag-ss">superset →</span></div><div class="ex-note">Pas d'élan, contrôle la descente</div></div><div class="ex-sets">3 × 12–15</div><div class="ex-pills"><span class="mpill mp-core">Bas abs</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Planche tenue <span class="tag-ss">← superset</span></div></div><div class="ex-sets">3 × 30–45 sec</div><div class="ex-pills"><span class="mpill mp-core">Core</span></div></div>
+    </div>
+  </div>
+
+  <div id="day-mar" class="session-panel">
+    <div class="session-head"><h3 class="session-title">💙 Push — Pecs · Épaules · Triceps</h3><span class="session-dur">~70 min</span></div>
+    <div class="ex-block-label">Bloc principal</div>
+    <div class="ex-list">
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Bench press plat barre</div><div class="ex-note">Coudes à 45–60°, prise légèrement large</div></div><div class="ex-sets">4 × 6–8</div><div class="ex-pills"><span class="mpill mp-c">Pecs</span><span class="mpill mp-t">Triceps</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Shoulder press haltères <span class="tag-key">priorité 2</span></div><div class="ex-note">Avant bench incliné — delts frais. Objectif épaules arrondies !</div></div><div class="ex-sets">4 × 8–10</div><div class="ex-pills"><span class="mpill mp-s">Épaules</span><span class="mpill mp-t">Triceps</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Bench press incliné haltères</div><div class="ex-note">Inclinaison 30–40°, focus pec haut</div></div><div class="ex-sets">3 × 10–12</div><div class="ex-pills"><span class="mpill mp-c">Pecs haut</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Butterfly pec deck</div><div class="ex-note">Étirement complet, contraction forte en fin</div></div><div class="ex-sets">3 × 12–15</div><div class="ex-pills"><span class="mpill mp-c">Pecs</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Lateral raises câble unilatéral <span class="tag-key">câble > haltère</span></div><div class="ex-note">Tension constante tout le ROM. 2–3 sec en descente.</div></div><div class="ex-sets">4 × 15–20/côté</div><div class="ex-pills"><span class="mpill mp-s">Delt médian</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Triceps pushdown câble <span class="tag-ss">superset →</span></div><div class="ex-note">Coudes fixes, extension complète</div></div><div class="ex-sets">3 × 12–15</div><div class="ex-pills"><span class="mpill mp-t">Triceps</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Overhead extension câble <span class="tag-ss">← superset</span></div><div class="ex-note">Long chef — bras définis de face et de côté</div></div><div class="ex-sets">3 × 12–15</div><div class="ex-pills"><span class="mpill mp-t">Triceps long</span></div></div>
+    </div>
+    <div class="ex-block-label">Abs — finisher 10 min</div>
+    <div class="ex-list">
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Cable crunch à genoux</div><div class="ex-note">Flexion de colonne, charge progressive</div></div><div class="ex-sets">4 × 15–20</div><div class="ex-pills"><span class="mpill mp-core">Droit abdo</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Shoulder tap planche <span class="tag-ss">superset →</span></div></div><div class="ex-sets">3 × 20 taps</div><div class="ex-pills"><span class="mpill mp-core">Core</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Russian twist lesté <span class="tag-ss">← superset</span></div></div><div class="ex-sets">3 × 20</div><div class="ex-pills"><span class="mpill mp-core">Obliques</span></div></div>
+    </div>
+  </div>
+
+  <div id="day-mer" class="session-panel">
+    <div class="session-head"><h3 class="session-title">🦵 Jambes — Quads dominant</h3><span class="session-dur">~60 min</span></div>
+    <div class="ex-block-label">Bloc principal — pas d'abs ce jour</div>
+    <div class="ex-list">
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Squat barre <span class="tag-key">composé clé</span></div><div class="ex-note">Stance moyen, descente sous parallèle</div></div><div class="ex-sets">4 × 6–8</div><div class="ex-pills"><span class="mpill mp-q">Quads</span><span class="mpill mp-g">Fessiers</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Leg press incliné</div><div class="ex-note">Pieds serrés et bas = focus quads</div></div><div class="ex-sets">4 × 10–12</div><div class="ex-pills"><span class="mpill mp-q">Quads</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Leg press horizontal unilatéral</div><div class="ex-note">Correction déséquilibres G/D</div></div><div class="ex-sets">3 × 12/côté</div><div class="ex-pills"><span class="mpill mp-q">Quads</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Leg extension machine <span class="tag-new">ajouté</span></div><div class="ex-note">Isolation pure quads. Pause 1 sec en haut.</div></div><div class="ex-sets">3 × 15–20</div><div class="ex-pills"><span class="mpill mp-q">Quads</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Leg curl allongé <span class="tag-new">ajouté</span></div><div class="ex-note">Équilibre ischio/quads — santé des genoux</div></div><div class="ex-sets">3 × 12–15</div><div class="ex-pills"><span class="mpill mp-h">Ischio</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Hip adductions machine <span class="tag-ss">superset →</span></div></div><div class="ex-sets">3 × 20</div><div class="ex-pills"><span class="mpill mp-g">Adducteurs</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Hip abductions machine <span class="tag-ss">← superset</span></div></div><div class="ex-sets">3 × 20</div><div class="ex-pills"><span class="mpill mp-g">Abducteurs</span></div></div>
+    </div>
+  </div>
+
+  <div id="day-jeu" class="session-panel">
+    <div class="session-head"><h3 class="session-title">💛 Pull — Dos · Biceps · Arrière-épaule</h3><span class="session-dur">~70 min</span></div>
+    <div class="ex-block-label">Bloc principal</div>
+    <div class="ex-list">
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Lat pulldown prise large</div><div class="ex-note">Descente au menton, coudes vers les hanches</div></div><div class="ex-sets">4 × 8–10</div><div class="ex-pills"><span class="mpill mp-b">Grand dorsal</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Seated cable row prise neutre <span class="tag-key">sem. impaires</span></div><div class="ex-note">Plus de charge = plus d'épaisseur dorsale</div></div><div class="ex-sets">4 × 10–12</div><div class="ex-pills"><span class="mpill mp-b">Trapèzes</span><span class="mpill mp-b">Rhomboïdes</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Single arm cable row <span class="tag-key">sem. paires</span></div></div><div class="ex-sets">3 × 12/côté</div><div class="ex-pills"><span class="mpill mp-b">Dorsal</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Face pull câble corde</div><div class="ex-note">Rotation externe. Santé rotateurs + delt arrière.</div></div><div class="ex-sets">4 × 15–20</div><div class="ex-pills"><span class="mpill mp-r">Delt arrière</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Reverse cable fly unilatéral</div></div><div class="ex-sets">3 × 15/côté</div><div class="ex-pills"><span class="mpill mp-r">Delt arrière</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Preacher curl unilatéral câble</div><div class="ex-note">Tension constante, contraction complète</div></div><div class="ex-sets">3 × 12/côté</div><div class="ex-pills"><span class="mpill mp-bi">Biceps</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Hammer curl haltères</div><div class="ex-note">Brachial + biceps — épaisseur du bras</div></div><div class="ex-sets">3 × 12–15</div><div class="ex-pills"><span class="mpill mp-bi">Brachial</span></div></div>
+    </div>
+    <div class="ex-block-label">Abs — finisher 10 min</div>
+    <div class="ex-list">
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Cable crunch à genoux <span class="tag-ss">superset →</span></div></div><div class="ex-sets">3 × 15–20</div><div class="ex-pills"><span class="mpill mp-core">Droit abdo</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Dead bug <span class="tag-ss">← superset</span></div></div><div class="ex-sets">3 × 10/côté</div><div class="ex-pills"><span class="mpill mp-core">Core profond</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Planche tenue</div><div class="ex-note">Progresser vers 60 sec en phase 3</div></div><div class="ex-sets">3 × 40–60 sec</div><div class="ex-pills"><span class="mpill mp-core">Core</span></div></div>
+    </div>
+  </div>
+
+  <div id="day-ven" class="session-panel">
+    <div class="session-head"><h3 class="session-title">🍑 Fessiers 2 + Accessoires Épaules</h3><span class="session-dur">~70 min</span></div>
+    <div class="ex-block-label">Bloc fessiers — volume & pump</div>
+    <div class="ex-list">
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Hip thrust barre — lourd <span class="tag-key">vise +2.5–5 kg vs lun</span></div></div><div class="ex-sets">4 × 6–8</div><div class="ex-pills"><span class="mpill mp-g">Fessiers</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Bulgarian split squat — tempo lent</div><div class="ex-note">Descente 4 sec, focus ressenti fessier</div></div><div class="ex-sets">3 × 12–15/côté</div><div class="ex-pills"><span class="mpill mp-g">Fessiers</span><span class="mpill mp-q">Quads</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">RDL unilatéral haltère <span class="tag-new">ajouté</span></div></div><div class="ex-sets">3 × 10–12/côté</div><div class="ex-pills"><span class="mpill mp-h">Ischio</span><span class="mpill mp-g">Fessiers</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Cable kickback <span class="tag-ss">superset →</span></div></div><div class="ex-sets">4 × 15/côté</div><div class="ex-pills"><span class="mpill mp-g">Fessiers</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Hip abductions machine <span class="tag-ss">← superset</span></div></div><div class="ex-sets">4 × 20</div><div class="ex-pills"><span class="mpill mp-g">Abducteurs</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Glute bridge sol + mini-band <span class="tag-new">ajouté</span></div><div class="ex-note">Band aux genoux. 2 sec en haut.</div></div><div class="ex-sets">3 × 20–25</div><div class="ex-pills"><span class="mpill mp-g">Fessiers</span></div></div>
+    </div>
+    <div class="ex-block-label">Accessoires épaules — 2e session semaine</div>
+    <div class="ex-list">
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Lateral raises câble unilatéral</div><div class="ex-note">Volume extra delt médian. Charge légère, technique parfaite.</div></div><div class="ex-sets">3 × 20/côté</div><div class="ex-pills"><span class="mpill mp-s">Delt médian</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Face pull + Band pull-apart <span class="tag-ss">superset</span></div></div><div class="ex-sets">3 × 15+20</div><div class="ex-pills"><span class="mpill mp-r">Delt arrière</span></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-name">Overhead extension câble</div></div><div class="ex-sets">3 × 15</div><div class="ex-pills"><span class="mpill mp-t">Triceps long</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ 03 CARB CYCLING ═══════ -->
+<section id="carb-cycling" class="section">
+  <div class="section-header reveal">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Carb Cycling 🥗</h2>
+  </div>
+
+  <div class="cc-intro reveal">
+    <p>Le carb cycling redistribue les glucides selon l'intensité de la séance — <strong>sans changer le total calorique pupute</strong>. Tu nourris tes muscles les jours où ils en ont le plus besoin 🙂‍↕️</p>
+    <div class="cc-rules-box">
+      <div class="cc-rule-row"><span>🦵 Jours de jambes (Lun, Mer, Ven)</span><strong style="color:var(--green-dark)">Glucides +30 g</strong></div>
+      <div class="cc-rule-row"><span>💙 Push / Pull (Mar, Jeu)</span><strong>Glucides base</strong></div>
+      <div class="cc-rule-row" style="border:none"><span>😴 Repos (Sam, Dim)</span><strong style="color:var(--pink-dark)">Glucides −40 g</strong></div>
+    </div>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;flex-wrap:wrap" class="reveal">
+    <span style="font-size:13px;color:var(--text-muted)">Voir pour la phase :</span>
+    <div class="cc-tabs">
+      <div class="cc-tab disabled">Phase 1</div>
+      <div class="cc-tab active" onclick="setCCPhase(2,this)">Phase 2</div>
+      <div class="cc-tab" onclick="setCCPhase(3,this)">Phase 3</div>
+    </div>
+    <span style="font-size:11px;color:var(--text-faint)">(Phase 1 : pas de carb cycling)</span>
+  </div>
+
+  <div id="cc-p2" class="cc-week reveal">
+    <div class="cc-day"><div class="cc-icon">🦵</div><div class="cc-dname">Lun</div><div class="cc-g" style="color:var(--green-dark)">193 g</div><div class="cc-type">jambes</div></div>
+    <div class="cc-day"><div class="cc-icon">💙</div><div class="cc-dname">Mar</div><div class="cc-g">163 g</div><div class="cc-type">push</div></div>
+    <div class="cc-day"><div class="cc-icon">🦵</div><div class="cc-dname">Mer</div><div class="cc-g" style="color:var(--green-dark)">193 g</div><div class="cc-type">quads</div></div>
+    <div class="cc-day"><div class="cc-icon">💛</div><div class="cc-dname">Jeu</div><div class="cc-g">163 g</div><div class="cc-type">pull</div></div>
+    <div class="cc-day"><div class="cc-icon">🍑</div><div class="cc-dname">Ven</div><div class="cc-g" style="color:var(--green-dark)">193 g</div><div class="cc-type">fessiers</div></div>
+    <div class="cc-day" style="opacity:.7"><div class="cc-icon">😴</div><div class="cc-dname">Sam</div><div class="cc-g" style="color:var(--pink-dark)">123 g</div><div class="cc-type">repos</div></div>
+    <div class="cc-day" style="opacity:.7"><div class="cc-icon">🧍🏻‍♀️</div><div class="cc-dname">Dim</div><div class="cc-g" style="color:var(--pink-dark)">123 g</div><div class="cc-type">repos</div></div>
+  </div>
+  <div id="cc-p3" class="cc-week reveal" style="display:none">
+    <div class="cc-day"><div class="cc-icon">🦵</div><div class="cc-dname">Lun</div><div class="cc-g" style="color:var(--green-dark)">173 g</div><div class="cc-type">jambes</div></div>
+    <div class="cc-day"><div class="cc-icon">💙</div><div class="cc-dname">Mar</div><div class="cc-g">143 g</div><div class="cc-type">push</div></div>
+    <div class="cc-day"><div class="cc-icon">🦵</div><div class="cc-dname">Mer</div><div class="cc-g" style="color:var(--green-dark)">173 g</div><div class="cc-type">quads</div></div>
+    <div class="cc-day"><div class="cc-icon">💛</div><div class="cc-dname">Jeu</div><div class="cc-g">143 g</div><div class="cc-type">pull</div></div>
+    <div class="cc-day"><div class="cc-icon">🍑</div><div class="cc-dname">Ven</div><div class="cc-g" style="color:var(--green-dark)">173 g</div><div class="cc-type">fessiers</div></div>
+    <div class="cc-day" style="opacity:.7"><div class="cc-icon">😴</div><div class="cc-dname">Sam</div><div class="cc-g" style="color:var(--pink-dark)">103 g</div><div class="cc-type">repos</div></div>
+    <div class="cc-day"><div class="cc-icon">🔄</div><div class="cc-dname">Dim</div><div class="cc-g" style="color:#f59f00;font-size:1rem">REFEED</div><div class="cc-type" style="color:#f59f00">2605 kcal</div></div>
+  </div>
+
+  <div class="cute-note reveal">
+    💡 <strong>Total hebdo identique !</strong> Le carb cycling ne change pas ton déficit total. Il redistribue juste les glucides là où tu en as le plus besoin. Résultat = meilleures perfs + meilleure récupération ✨
+  </div>
+
+  <div class="refeed-box reveal">
+    <div class="refeed-title">🔄 Refeed — Protocole exact</div>
+    <div class="refeed-grid">
+      <div>
+        <div class="refeed-sub">Le jour du refeed</div>
+        <div class="refeed-row"><span>Calories</span><strong>2 605 kcal</strong></div>
+        <div class="refeed-row"><span>Protéines</span><strong>150 g (constant)</strong></div>
+        <div class="refeed-row"><span>Glucides</span><strong style="color:var(--green-dark)">320–340 g</strong></div>
+        <div class="refeed-row"><span>Lipides</span><strong style="color:var(--pink-dark)">~50 g (bas)</strong></div>
+      </div>
+      <div>
+        <div class="refeed-sub">Pourquoi obligatoire</div>
+        <p style="font-size:13px;line-height:1.7;color:var(--text-muted)">Relance la <strong>leptine</strong>, réduit le cortisol, restore le glycogène musculaire. Un refeed bien fait = pas de perte de perfs à la salle. Un cheat non structuré = une semaine de déficit annulée 😤</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ 04 PROJECTION ═══════ -->
+<section id="projection" class="section">
+  <div class="section-header reveal">
+    <span class="section-num">04</span>
+    <h2 class="section-title">Projection 12 semaines 📈</h2>
+  </div>
+  <div class="proj-container" id="projRows"></div>
+  <div class="proj-summary reveal">
+    <div class="proj-s"><div class="proj-s-icon">🏁</div><div class="proj-s-val">75.6 kg</div><div class="proj-s-label">Départ</div></div>
+    <div class="proj-s"><div class="proj-s-icon">🎯</div><div class="proj-s-val">~64.8 kg</div><div class="proj-s-label">S12 estimé</div></div>
+    <div class="proj-s"><div class="proj-s-icon">🔥</div><div class="proj-s-val">−10.8 kg</div><div class="proj-s-label">Perte totale</div></div>
+  </div>
+  <p class="cute-note reveal">💬 Projection avec refeeds S6 et S10 (perte nette = 0 ces semaines). La réalité fluctue selon l'eau, le cycle et le stress. Seule la <strong>moyenne sur 7 jours</strong> compte !</p>
+</section>
+
+<!-- ═══════ 05 RÈGLES ═══════ -->
+<section id="regles" class="section">
+  <div class="section-header reveal">
+    <span class="section-num">05</span>
+    <h2 class="section-title">Règles absolues 📌</h2>
+  </div>
+  <div class="rules-grid">
+    <div class="rule-card reveal stagger-1"><div class="rule-icon">🥩</div><div class="rule-title">150–158 g de protéines/jour</div><div class="rule-body">Si tu dois sacrifier un macro, c'est toujours les glucides, jamais les protéines. En déficit agressif, les protéines = ton assurance contre le catabolisme.</div></div>
+    <div class="rule-card reveal stagger-2"><div class="rule-icon">⚖️</div><div class="rule-title">Peser chaque matin · moyenne 7 jours</div><div class="rule-body">Le poids fluctue de 1–2 kg selon l'eau, le sodium, le cycle. Seule la moyenne hebdo compte pour ajuster ton plan.</div></div>
+    <div class="rule-card reveal stagger-3"><div class="rule-icon">😴</div><div class="rule-title">7–8h de sommeil minimum</div><div class="rule-body">Le manque de sommeil augmente le cortisol, favorise la rétention d'eau et augmente la ghréline. Déficit parfait + mauvais sommeil = pas de perte.</div></div>
+    <div class="rule-card reveal stagger-4"><div class="rule-icon">💧</div><div class="rule-title">2.5–3 L d'eau par jour</div><div class="rule-body">La rétention d'eau masque la perte de gras. Bonne hydratation = leptine stable + faim réduite + meilleures perfs.</div></div>
+    <div class="rule-card reveal stagger-5"><div class="rule-icon">🔄</div><div class="rule-title">Refeed ≠ cheat meal</div><div class="rule-body">Refeed structuré (TDEE, glucides hauts, lipides bas) = relance leptine. Cheat mal géré = semaine de déficit annulée.</div></div>
+    <div class="rule-card reveal stagger-6"><div class="rule-icon">📸</div><div class="rule-title">Photos + mensurations > balance seule</div><div class="rule-body">Taille, hanches, cuisses, bras chaque semaine. Photo tous les 14 jours, même lumière, même pose !</div></div>
+    <div class="rule-card reveal"><div class="rule-icon">📈</div><div class="rule-title">Progressive overload toujours</div><div class="rule-body">Hip thrust, squat, bench, shoulder press, lat pulldown : progresser en charge ou reps chaque semaine = préserver la masse en cut.</div></div>
+    <div class="rule-card reveal"><div class="rule-icon">🚨</div><div class="rule-title">Si perte &lt; 0.4 kg/sem sur 2 semaines</div><div class="rule-body">D'abord : augmente le cardio ou coupe 20 g de glucides. Vérifie ton tracking avant de toucher aux calories. Jamais sous 1 700 kcal.</div></div>
+  </div>
+</section>
+
+<footer>
+  ✿ cut plan · 12 semaines 🧍🏻‍♀️ let me cook ok ? 🙂‍↕️
+  btw si t'as lu si loins SALUT CRAPULLLEEE la bizzz <3
+</footer>
+
+<script src="sticker_data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
